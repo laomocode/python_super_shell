@@ -1,15 +1,7 @@
 # Python终端
 import os
-import pygame
 import time
 次数=0
-def 金坷垃():
-    pygame.mixer.init()
-    音乐=open("金坷垃.mp3")
-    音频=pygame.mixer.music.load(音乐)
-    pygame.mixer.music.play()
-    time.sleep(98)
-    pygame.mixer.play.stop()
 def 帮助():
     print("帮助：")
     print("输入“退出”来退出终端。")
@@ -36,9 +28,6 @@ while 1:
         continue
     elif 输入=="系统":
         print(系统信息())
-        continue
-    elif 输入=="金坷垃":
-        金坷垃()
         continue
     输出=os.system(输入)
     print(输出)
