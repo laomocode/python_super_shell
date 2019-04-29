@@ -1,14 +1,19 @@
 # Python终端
 import os
 import time
+系统=os.name
 次数=0
+def 天气():
+    if 系统=="posix":
+        print(os.system("curl wttr.in"))
 def 帮助():
     print("帮助：")
     print("输入“退出”来退出终端。")
     print("输入“次数”显示输入次数。")
-    print("输入“系统”查看系统信息")
+    print("输入“系统”查看系统信息。")
+    if 系统=="posix":
+        print("输入“天气”查看当前天气（为英文）。")
 def 系统信息(形式):
-    系统=os.name
     if 系统=="nt":
         print(os.system("ver"))
         if 形式=="普通":
@@ -24,6 +29,9 @@ while 1:
     次数=次数+1
     if 输入=="帮助":
         帮助()
+        continue
+    elif 输入=="天气":
+        天气()
         continue
     elif 输入=="退出":
         break
