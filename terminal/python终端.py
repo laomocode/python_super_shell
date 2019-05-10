@@ -2,7 +2,6 @@
 import os
 import time
 系统=os.name
-次数=0
 def 天气():
     if 系统=="posix":
         print(os.system("curl wttr.in"))
@@ -12,7 +11,7 @@ def 计算器():
         if 选项==5:
             break
         因数1=int(input("请输入第一个因数："))
-        因数2=int(input("请输入第二个因数：")) 
+        因数2=int(input("请输入第二个因数："))
         if 选项==1:
             结果=因数1+因数2
         elif 选项==2:
@@ -43,7 +42,6 @@ def 系统信息(形式):
 print(系统信息("启动输出"))
 while 1:
     输入=input("终端：")
-    次数=次数+1
     if 输入=="帮助":
         帮助()
         continue
@@ -52,9 +50,6 @@ while 1:
         continue
     elif 输入=="退出":
         break
-    elif 输入=="次数":
-        print("次数：",次数,"次")
-        continue
     elif 输入=="系统":
         print(系统信息("普通"))
         continue
@@ -63,4 +58,3 @@ while 1:
         continue
     输出=os.system(输入)
     print(输出)
-print("你输入了：",次数,"次")
