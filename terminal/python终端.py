@@ -1,6 +1,7 @@
 # Python终端
 import os
 import time
+import webbrowser
 系统=os.name
 def 天气():
     if 系统=="posix":
@@ -20,13 +21,15 @@ def 计算器():
             结果=因数1*因数2
         elif 选项==4:
             结果=因数1/因数2
+        else:
+            print("你输入的内容不正确。")
         print(结果)
 def 帮助():
     print("帮助：")
     print("输入“退出”来退出终端。")
-    print("输入“次数”显示输入次数。")
     print("输入“系统”查看系统信息。")
     print("输入“计算器”计算算式。")
+    print("输入“项目”打开项目网址。")
     if 系统=="posix":
         print("输入“天气”查看当前天气（为英文）。")
 def 系统信息(形式):
@@ -39,6 +42,8 @@ def 系统信息(形式):
         if 形式=="普通":
             print("你的系统是UNIX或UNIX LIKE。")
         print(系统)
+def 项目():
+    webbrowser.open("https://gitee.com/laomocode/python_linux_terminal")
 print(系统信息("启动输出"))
 while 1:
     输入=input("终端：")
@@ -55,6 +60,8 @@ while 1:
         continue
     elif 输入=="计算器":
         计算器()
+    elif 输入=="项目":
+        项目()
         continue
     输出=os.system(输入)
     print(输出)
