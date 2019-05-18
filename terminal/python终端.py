@@ -1,6 +1,5 @@
 # Python终端
 import os
-import time
 import webbrowser
 系统=os.name
 def 天气():
