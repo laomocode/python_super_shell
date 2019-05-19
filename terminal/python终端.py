@@ -1,7 +1,9 @@
-# Python终端
+# Python超级Shell
 import os
 import webbrowser
 系统=os.name
+print("欢迎使用Python 超级Shell!")
+print("此项目已经改名，原名为Python Linux终端。")
 def 天气():
     if 系统=="posix":
         print(os.system("curl wttr.in"))
@@ -42,7 +44,8 @@ def 系统信息(形式):
             print("你的系统是UNIX或UNIX LIKE。")
         print(系统)
 def 项目():
-    webbrowser.open("https://gitee.com/laomocode/python_linux_terminal")
+    webbrowser.open("https://gitee.com/laomocode/python_super_shell")
+print("下面是系统信息：")
 print(系统信息("启动输出"))
 while 1:
     输入=input("终端：")
