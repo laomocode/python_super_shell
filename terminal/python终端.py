@@ -36,13 +36,10 @@ def 帮助():
 def 系统信息(形式):
     if 系统=="nt":
         print(os.system("ver"))
-        if 形式=="普通":
-            print("你的系统是Windows。")
+        print("你的系统是Windows。")
     if 系统=="posix":
         print(os.system("uname -a"))
-        if 形式=="普通":
-            print("你的系统是UNIX或UNIX LIKE。")
-        print(系统)
+        print("你的系统是UNIX或UNIX LIKE。")
 def 项目():
     webbrowser.open("https://gitee.com/laomocode/python_super_shell")
 print("下面是系统信息：")
