@@ -32,7 +32,7 @@ def 帮助():
     print("输入“系统”看系统信息。")
     print("输入“计算”计算算式。")
     print("输入“项目”打开项目网址。")
-    print("输入“版本”查看版本号")
+    print("输入“关于”查看关于信息。")
     if 系统=="posix":
         print("输入“天气”查看当前天气（为英文）。")
     print("从项目文件夹里下载的版本均为滚动版本，发行里为正式版本。")
@@ -61,8 +61,9 @@ while 1:
     elif 输入=="系统":
         系统信息()
         continue
-    elif 输入=="版本":
+    elif 输入=="关于":
         print("您现在用的是",版本,"版本。")
+        print("项目网址：https://gitee.com/laomocode/python_super_shell")
         continue
     elif 输入=="计算器":
         计算器()
