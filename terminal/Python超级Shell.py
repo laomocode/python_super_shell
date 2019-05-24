@@ -9,7 +9,16 @@ print("此项目已经改名，原名为Python Linux终端。")
 def 随机数():
     最小数=int(input("请输入随机数的最小数："))
     最大数=int(input("请输入随机数的最大数："))
-    print("您得到的随机数是：",random.randint(最小数，最大数))
+    print("您得到的随机数是：",random.randint(最小数,最大数))
+def 今天吃什么():
+    吃的东西=["火锅","饺子","麦当劳","肯德基","小龙虾","鸡","鸭","鹅"]
+    while 1:
+        print("今天吃：",吃的东西[random.randint(0,len(吃的东西)-1)])
+        重复=input("还想继续吗？（输入”确定“继续，按回车退出）:")
+        if 重复=="确定":
+            continue
+        else:
+            break
 def 天气():
     if 系统=="posix":
         print(os.system("curl wttr.in"))
@@ -40,6 +49,7 @@ def 帮助():
     print("输入“关于”查看关于信息。")
     print("输入”切换目录“来切换目录（请勿使用cd命令切换）。")
     print("输入”随机数“得到随机数。")
+    print("输入”今天吃什么“来看看今天要吃什么。")
     if 系统=="posix":
         print("输入“天气”查看当前天气（为英文）。")
     print("从项目文件夹里下载的版本均为滚动版本，发行里为正式版本。")
@@ -61,6 +71,9 @@ while 1:
     输入=input("终端：")
     if 输入=="帮助":
         帮助()
+        continue
+    elif 输入=="今天吃什么":
+        今天吃什么()
         continue
     elif 输入=="天气":
         天气()
