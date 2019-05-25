@@ -78,7 +78,7 @@ def 帮助():
     print("输入”今天吃什么“来看看今天要吃什么。")
     print("输入”金坷垃“来播放金坷垃音乐。")
     print("输入“真香”来播放王境泽的真香。")
-    print("输入“我从未见过如此厚颜无耻之人”来听王司徒气死。")
+    print("输入“我从未见过如此厚颜无耻之人”或“王司徒气死”来听王司徒气死。")
     if 系统=="posix":
         print("输入“天气”查看当前天气（为英文）。")
     print("从项目文件夹里下载的版本均为滚动版本，发行里为正式版本。")
@@ -91,7 +91,7 @@ def 系统信息():
         print("您的系统是Windows。")
     if 系统=="posix":
         print(os.system("uname -a"))
-        print("您的系统是UNIX或UNIX LIKE。")
+        print("您的系统是UNIX或兼容于UNIX的系统（如Linux、Mac OS X、BSD等等）。")
 def 项目():
     webbrowser.open("https://gitee.com/laomocode/python_super_shell")
 print("下面是系统信息：")
@@ -101,7 +101,7 @@ while 1:
     if 输入=="帮助":
         帮助()
         continue
-    elif 输入=="我从未见过如此厚颜无耻之人":
+    elif 输入=="我从未见过如此厚颜无耻之人" or 输入=="王司徒气死":
         王司徒()
         continue
     elif 输入=="真香":
@@ -136,5 +136,4 @@ while 1:
     elif 输入=="随机数":
         随机数()
         continue
-    输出=os.system(输入)
-    print(输出)
+    print(os.system(输入))
