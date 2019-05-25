@@ -9,7 +9,7 @@ import time
 工作目录=os.getcwd()
 print("欢迎使用Python 超级Shell",版本,"版本！")
 print("此项目已经改名，原名为Python Linux终端。")
-print("输入”帮助“来查看帮助。")
+print("输入“帮助”来查看帮助。")
 def 切换工作目录():
     os.chdir(工作目录)
     os.chdir("terminal")
@@ -42,7 +42,7 @@ def 今天吃什么():
     吃的东西=["火锅","饺子","麦当劳","肯德基","小龙虾","鸡","鸭","鹅"]
     while 1:
         print("今天吃：",吃的东西[random.randint(0,len(吃的东西)-1)])
-        重复=input("还想继续吗？（输入”确定“继续，按回车退出）:")
+        重复=input("还想继续吗？（输入“确定”继续，按回车退出）:")
         if 重复=="确定":
             continue
         else:
@@ -73,10 +73,10 @@ def 帮助():
     print("输入“退出”退出终端。")
     print("输入“计算器”计算算式。")
     print("输入“关于”查看关于信息。")
-    print("输入”切换目录“来切换目录（请勿使用cd命令切换）。")
-    print("输入”随机数“得到随机数。")
-    print("输入”今天吃什么“来看看今天要吃什么。")
-    print("输入”金坷垃“来播放金坷垃音乐。")
+    print("输入“切换目录”来切换目录（请勿使用cd命令切换）。")
+    print("输入“随机数”得到随机数。")
+    print("输入“今天吃什么”来看看今天要吃什么。")
+    print("输入“金坷垃”来播放金坷垃音乐。")
     print("输入“真香”来播放王境泽的真香。")
     print("输入“我从未见过如此厚颜无耻之人”或“王司徒气死”来听王司徒气死。")
     if 系统=="posix":
@@ -119,7 +119,7 @@ while 1:
     elif 输入=="关于":
         print("您现在用的是",版本,"版本。")
         print("项目网址：https://gitee.com/laomocode/python_super_shell")
-        网页=input("是否打开项目网页？（回车不打开网页，输入”打开“打开项目网页）：")
+        网页=input("是否打开项目网页？（回车不打开网页，输入“打开”打开项目网页）：")
         if 网页=="打开":
             webbrowser.open("https://gitee.com/laomocode/python_super_shell")
         print("以下是系统信息：")
