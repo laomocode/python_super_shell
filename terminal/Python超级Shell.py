@@ -65,7 +65,6 @@ def 计算器():
 def 帮助():
     print("帮助：")
     print("输入“退出”退出终端。")
-    print("输入“系统”看系统信息。")
     print("输入“计算”计算算式。")
     print("输入“项目”打开项目网址。")
     print("输入“关于”查看关于信息。")
@@ -110,12 +109,11 @@ while 1:
         continue
     elif 输入=="退出":
         break
-    elif 输入=="系统":
-        系统信息()
-        continue
     elif 输入=="关于":
         print("您现在用的是",版本,"版本。")
         print("项目网址：https://gitee.com/laomocode/python_super_shell")
+        print("以下是系统信息：")
+        系统信息()
         continue
     elif 输入=="计算器":
         计算器()
