@@ -9,6 +9,7 @@ import time
 工作目录=os.getcwd()
 print("欢迎使用Python 超级Shell",版本,"版本！")
 print("此项目已经改名，原名为Python Linux终端。")
+print("输入”帮助“来查看帮助。")
 def 切换工作目录():
     os.chdir(工作目录)
     os.chdir("terminal")
@@ -71,7 +72,6 @@ def 帮助():
     print("帮助：")
     print("输入“退出”退出终端。")
     print("输入“计算”计算算式。")
-    print("输入“项目”打开项目网址。")
     print("输入“关于”查看关于信息。")
     print("输入”切换目录“来切换目录（请勿使用cd命令切换）。")
     print("输入”随机数“得到随机数。")
@@ -92,8 +92,6 @@ def 系统信息():
     if 系统=="posix":
         print(os.system("uname -a"))
         print("您的系统是UNIX或兼容于UNIX的系统（如Linux、Mac OS X、BSD等等）。")
-def 项目():
-    webbrowser.open("https://gitee.com/laomocode/python_super_shell")
 print("下面是系统信息：")
 系统信息()
 while 1:
@@ -121,14 +119,14 @@ while 1:
     elif 输入=="关于":
         print("您现在用的是",版本,"版本。")
         print("项目网址：https://gitee.com/laomocode/python_super_shell")
+        网页=input("是否打开项目网页？（回车不打开网页，输入”打开“打开项目网页）：")
+        if 网页=="打开":
+            webbrowser.open("https://gitee.com/laomocode/python_super_shell")
         print("以下是系统信息：")
         系统信息()
         continue
     elif 输入=="计算器":
         计算器()
-    elif 输入=="项目":
-        项目()
-        continue
     elif 输入=="切换目录":
         输入的目录=input("请输入您要切换的目录：")
         切换目录(输入的目录)
