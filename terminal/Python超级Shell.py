@@ -127,6 +127,7 @@ while 1:
         continue
     elif 输入=="计算器":
         计算器()
+        continue
     elif 输入=="切换目录":
         输入的目录=input("请输入您要切换的目录：")
         切换目录(输入的目录)
