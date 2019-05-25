@@ -9,17 +9,25 @@ import time
 工作目录=os.getcwd()
 print("欢迎使用Python 超级Shell",版本,"版本！")
 print("此项目已经改名，原名为Python Linux终端。")
-def 金坷垃():
+def 切换工作目录():
     os.chdir(工作目录)
     os.chdir("terminal")
-    文件=r"金坷垃.mp3"
+def 音乐(音频,秒数):
+    文件=open(音频,mode='r')
     pygame.init()
     pygame.mixer.init()
     播放=pygame.mixer.music.load(文件)
-    print("即将播放金坷垃广告……")
     pygame.mixer.music.play()
-    time.sleep(98)
+    time.sleep(秒数)
     pygame.mixer.music.stop()
+def 金坷垃():
+    切换工作目录()
+    print("即将播放金坷垃广告……")
+    音乐("金坷垃.mp3",98)
+def 真香():
+    切换工作目录()
+    print("真香！")
+    音乐("真香.mp3",8)
 def 随机数():
     最小数=int(input("请输入随机数的最小数："))
     最大数=int(input("请输入随机数的最大数："))
@@ -65,6 +73,7 @@ def 帮助():
     print("输入”随机数“得到随机数。")
     print("输入”今天吃什么“来看看今天要吃什么。")
     print("输入”金坷垃“来播放金坷垃音乐。")
+    print("输入“真香”来播放王境泽的真香。")
     if 系统=="posix":
         print("输入“天气”查看当前天气（为英文）。")
     print("从项目文件夹里下载的版本均为滚动版本，发行里为正式版本。")
@@ -86,6 +95,9 @@ while 1:
     输入=input("终端：")
     if 输入=="帮助":
         帮助()
+        continue
+    elif 输入=="真香":
+        真香()
         continue
     elif 输入=="金坷垃":
         金坷垃()
