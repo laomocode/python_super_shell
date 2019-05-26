@@ -23,6 +23,10 @@ def 音乐(音频,秒数):
     time.sleep(秒数)
     pygame.mixer.music.stop()
     文件.close()
+def aipc():
+    切换工作目录()
+    print("即将播放AIPC广告……")
+    音乐("AIPC.mp3",492)
 def 王司徒():
     切换工作目录()
     print("王司徒即将气死……")
@@ -82,7 +86,7 @@ def 帮助():
     print("为了稳定，建议从发行版里下载。")
 def 音乐聚合():
     while 1:
-        输入=int(input("您需要听什么？（1）金坷垃、（2）真香、（3）王司徒气死、（4）退出："))
+        输入=int(input("您需要听什么？（1）金坷垃、（2）真香、（3）王司徒气死、（4）AIPC、（5）退出："))
         if 输入==1:
             金坷垃()
         elif 输入==2:
@@ -90,6 +94,8 @@ def 音乐聚合():
         elif 输入==3:
             王司徒()
         elif 输入==4:
+            aipc()
+        elif 输入==5:
             break
         else:
             continue
