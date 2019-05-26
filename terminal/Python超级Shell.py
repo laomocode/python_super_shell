@@ -72,15 +72,12 @@ def 计算器():
 def 帮助():
     print("帮助：")
     print("输入“退出”退出终端。")
+    print("输入“工具箱”启动工具箱。")
     print("输入“计算器”计算算式。")
     print("输入“关于”查看关于信息。")
-    print("输入“随机数”得到随机数。")
-    print("输入“今天吃什么”来看看今天要吃什么。")
     print("输入“金坷垃”来播放金坷垃音乐。")
     print("输入“真香”来播放王境泽的真香。")
     print("输入“我从未见过如此厚颜无耻之人”或“王司徒气死”来听王司徒气死。")
-    if 系统=="posix":
-        print("输入“天气”查看当前天气（为英文）。")
     print("从项目文件夹里下载的版本均为滚动版本，发行里为正式版本。")
     print("为了稳定，建议从发行版里下载。")
 def 系统信息():
@@ -90,6 +87,24 @@ def 系统信息():
     if 系统=="posix":
         print(os.system("uname -a"))
         print("您的系统是UNIX或兼容于UNIX的系统（如Linux、Mac OS X、BSD等等）。")
+def 工具箱():
+    while 1:
+        if 系统=="posix":
+            输入=int(input("您要使用工具箱那个功能？（1）今天吃什么、（2）随机数、（3）天气、（4）退出："))
+        if 系统=="nt":
+            输入=int(input("您要使用工具箱那个功能？（1）今天吃什么、（2）随机数、（3）退出："))
+        if 输入==1:
+            今天吃什么()
+        if 输入==2:
+            随机数()
+        if 系统=="posix" and 输入==3:
+            天气()
+        if 系统=="posix" and 输入==4:
+            break
+        if 系统=="nt" and 输入==3:
+            break
+        else:
+            continue
 print("下面是系统信息：")
 系统信息()
 while 1:
@@ -101,8 +116,11 @@ while 1:
         else:
             os.chdir(目录)
             continue
-    if 输入=="帮助":
+    elif 输入=="帮助":
         帮助()
+        continue
+    elif 输入=="工具箱":
+        工具箱()
         continue
     elif 输入=="我从未见过如此厚颜无耻之人" or 输入=="王司徒气死":
         王司徒()
@@ -112,12 +130,6 @@ while 1:
         continue
     elif 输入=="金坷垃":
         金坷垃()
-        continue
-    elif 输入=="今天吃什么":
-        今天吃什么()
-        continue
-    elif 输入=="天气":
-        天气()
         continue
     elif 输入=="退出":
         break
@@ -132,8 +144,5 @@ while 1:
         continue
     elif 输入=="计算器":
         计算器()
-        continue
-    elif 输入=="随机数":
-        随机数()
         continue
     print(os.system(输入))
