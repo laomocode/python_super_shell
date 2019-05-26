@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Python超级Shell
 import os
 import webbrowser
