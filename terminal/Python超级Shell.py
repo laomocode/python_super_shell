@@ -83,8 +83,6 @@ def 帮助():
         print("输入“天气”查看当前天气（为英文）。")
     print("从项目文件夹里下载的版本均为滚动版本，发行里为正式版本。")
     print("为了稳定，建议从发行版里下载。")
-def 切换目录(目录):
-    os.chdir(目录)
 def 系统信息():
     if 系统=="nt":
         print(os.system("ver"))
@@ -101,7 +99,7 @@ while 1:
         if 目录=="":
             continue
         else:
-            切换目录(目录)
+            os.chdir(目录)
             continue
     if 输入=="帮助":
         帮助()
