@@ -37,8 +37,21 @@ def 金坷垃():
     音乐("金坷垃.mp3",98)
 def 真香():
     切换工作目录()
-    print("真香！")
-    音乐("真香.mp3",8)
+    文件=open("真香.mp3",mode='r')
+    pygame.init()
+    pygame.mixer.init()
+    播放=pygame.mixer.music.load(文件)
+    pygame.mixer.music.play()
+    print("我王境泽就是饿死。")
+    time.sleep(2)
+    print("死外面从这儿跳下去！")
+    time.sleep(2)
+    print("也不会吃一点东西！")
+    time.sleep(2)
+    print("啊，真香诶！")
+    time.sleep(2)
+    pygame.mixer.music.stop()
+    文件.close()
 def 随机数():
     最小数=int(input("请输入随机数的最小数："))
     最大数=int(input("请输入随机数的最大数："))
@@ -143,6 +156,7 @@ while 1:
         continue
     elif 输入=="音乐":
         音乐聚合()
+        continue
     elif 输入=="退出":
         break
     elif 输入=="关于":
