@@ -23,6 +23,19 @@ def 音乐(音频,秒数):
     time.sleep(秒数)
     pygame.mixer.music.stop()
     文件.close()
+def 搜索():
+    搜索引擎=int(input("输入您想要的搜索引擎：（1）百度、（2）360搜索、（3）谷歌、（4）搜狗、（5）秘迹："))
+    搜索内容=input("请输入您要搜索的内容：")
+    if 搜索引擎==1:
+        webbrowser.open("https://www.baidu.com/s?wd="+搜索内容)
+    elif 搜索引擎==2:
+        webbrowser.open("https://www.so.com/s?q="+搜索内容)
+    elif 搜索引擎==3:
+        webbrowser.open("https://www.google.com/search?q="+搜索内容)
+    elif 搜索引擎==4:
+        webbrowser.open("https://www.sogou.com/web?query="+搜索内容)
+    elif 搜索引擎==5:
+        webbrowser.open("https://mijisou.com/search?q="+搜索内容)
 #def aipc():
     #切换工作目录()
     #文件=open("AIPC.mp3",mode='r')
@@ -139,7 +152,7 @@ def 王司徒():
     time.sleep(7)
     print("诸葛亮：“必有高论，面向到竟说出如此粗鄙之语！”")
     # 3分33秒
-    time.sleep(9)l
+    time.sleep(9)
     print("诸葛亮：“我有一言，请诸位静听：’昔日桓帝、灵帝之时，汉统衰落，宦官酿祸，国外岁凶，四方扰攘。黄巾之后，董卓、李傕、郭汜等接踵而起。劫持汉帝，残暴生灵，因之，庙堂之上，朽木为官，殿陛之间禽兽食禄！以至狼心狗行之辈汹汹当朝，奴颜婢膝之徒，纷纷秉政，以致使社稷变为丘墟，苍生饱受涂炭之苦！至此国难之际，王司徒又有何作为？王司徒之生平，我素有所知，你世居东海之滨，初举孝廉入仕，理当匡君辅国，安汉兴刘，何期反助逆贼，同模篡位！罪恶深重，天地不容！‘”")
     time.sleep(80)
     # 4分53秒
@@ -262,18 +275,20 @@ def 系统信息():
 def 工具箱():
     while 1:
         if 系统=="posix":
-            输入=int(input("您要使用工具箱那个功能？（1）今天吃什么、（2）随机数、（3）天气、（4）退出："))
+            输入=int(input("您要使用工具箱那个功能？（1）今天吃什么、（2）搜索、（3）随机数、（4）天气、（5）退出："))
         if 系统=="nt":
-            输入=int(input("您要使用工具箱那个功能？（1）今天吃什么、（2）随机数、（3）退出："))
+            输入=int(input("您要使用工具箱那个功能？（1）今天吃什么、（2）搜索、（3）随机数、（4）退出："))
         if 输入==1:
             今天吃什么()
         if 输入==2:
+            搜索()
+        if 输入==3:
             随机数()
-        if 系统=="posix" and 输入==3:
-            天气()
         if 系统=="posix" and 输入==4:
+            天气()
+        if 系统=="posix" and 输入==5:
             break
-        if 系统=="nt" and 输入==3:
+        if 系统=="nt" and 输入==4:
             break
         else:
             continue
