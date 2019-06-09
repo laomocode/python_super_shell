@@ -316,9 +316,14 @@ def 王司徒():
     pygame.quit()
     文件.close()
 def 金坷垃():
-    切换工作目录()
-    print("即将播放金坷垃广告……")
-    音乐("金坷垃.mp3",98)
+    文件=open("金坷垃.mp3",mode='r')
+    pygame.init()
+    pygame.mixer.init()
+    播放=pygame.mixer.music.load(文件)
+    pygame.mixer.music.play()
+    time.sleep(98)
+    pygame.mixer.music.stop()
+    文件.close()
 def 真香():
     切换工作目录()
     文件=open("真香.mp3",mode='r')
@@ -379,10 +384,10 @@ def 帮助():
     print("输入“工具箱”启动工具箱。")
     print("输入“计算器”计算算式。")
     print("输入“关于”查看关于信息。")
-    print("输入“音乐”来听些东西。")
+    print("输入“音视频”来听或看些东西。")
     print("从项目文件夹里下载的版本均为滚动版本，发行里为正式版本。")
     print("为了稳定，建议从发行版里下载。")
-def 音乐聚合():
+def 音视频聚合():
     while 1:
         输入=int(input("您需要听什么？（1）金坷垃、（2）真香、（3）王司徒气死、（4）AIPC、（5）Are You OK、（6）念诗之王、（7）退出："))
         #输入=int(input("您需要听什么？（1）金坷垃、（2）真香、（3）王司徒气死、（4）退出："))
@@ -449,8 +454,8 @@ while 1:
     elif 输入=="工具箱":
         工具箱()
         continue
-    elif 输入=="音乐":
-        音乐聚合()
+    elif 输入=="音视频":
+        音视频聚合()
         continue
     elif 输入=="退出":
         break
