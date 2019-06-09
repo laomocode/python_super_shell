@@ -36,6 +36,7 @@ def 音乐(音频,秒数):
     pygame.mixer.music.play()
     time.sleep(秒数)
     pygame.mixer.music.stop()
+    pygame.quit()
     文件.close()
 def AreYouOK():
     切换工作目录()
@@ -237,6 +238,7 @@ def aipc():
     print("AIPC超低价格，超强性能（原台词为“功能”，但广告的画面中为“性能“，由于现代计算机的功能是靠软件来的，可以随时扩展和删除。因此”功能“不准确，转而用画面中的”性能“）、超酷外形，仅售1699元。心动不如行动，赶紧拿起电话抢购吧！")
     time.sleep(9)
     pygame.mixer.music.stop()
+    pygame.quit()
     文件.close()
 def 王司徒():
     切换工作目录()
@@ -311,6 +313,7 @@ def 王司徒():
     print("王朗：当场去世。")
     time.sleep(26)
     pygame.mixer.music.stop()
+    pygame.quit()
     文件.close()
 def 金坷垃():
     切换工作目录()
@@ -332,6 +335,7 @@ def 真香():
     print("啊，真香诶！")
     time.sleep(2)
     pygame.mixer.music.stop()
+    pygame.quit()
     文件.close()
 def 随机数():
     最小数=int(input("请输入随机数的最小数："))
