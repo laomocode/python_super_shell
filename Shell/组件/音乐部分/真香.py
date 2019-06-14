@@ -2,6 +2,7 @@ if __name__ != '__main__':
     import pygame
     import sys
     import time
+    import os
 def 真香():
     os.chdir(sys.path[0])
     os.chdir("音乐")

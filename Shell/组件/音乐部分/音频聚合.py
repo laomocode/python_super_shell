@@ -1,6 +1,8 @@
 # 音频聚合
 if __name__ != '__main__':
     import os
+    import sys
+    系统=os.name
     if 系统=="posix":
         sys.path.append(sys.path[0]+"/组件/音乐部分")
     elif 系统=="nt":
@@ -8,6 +10,9 @@ if __name__ != '__main__':
     from aipc import *
     from 王司徒 import *
     from 真香 import *
+    from AreYouOK import *
+    from 念诗之王 import *
+    from 金坷垃 import *
 def 音频聚合():
     while 1:
         输入=int(input("您需要听什么？（1）金坷垃、（2）真香、（3）王司徒气死、（4）AIPC、（5）Are You OK、（6）念诗之王、（7）退出："))
