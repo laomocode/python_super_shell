@@ -1,15 +1,14 @@
 if __name__ != '__main__':
-    import sys
-    import os
-    系统=os.name
+    from sys import path
+    from os import name
+    系统=name
     if 系统=="posix":
-        sys.path.append(sys.path[0]+"/组件/工具箱")
+        path.append(path[0]+"/组件/工具箱")
     elif 系统=="nt":
-        sys.path.append(sys.path[0]+"\组件\工具箱")
+        path.append(path[0]+"\组件\工具箱")
     from 天气 import *
     from 搜索 import *
     from 民国和公元转换 import *
-    from 计算器 import *
     from 随机数 import *
     from 清代年号与公元纪年转换 import *
 def 工具箱():
@@ -40,7 +39,7 @@ def 工具箱():
                 年号=input("请输入你要转换年份的年号：")
                 清朝年号和公元纪年转换(年份,"清朝年号转公元纪年",年号)
             elif 输入==2:
-                清朝年号和公元纪年转换(年份,"公元纪年转清朝年号")
+                清朝年号和公元纪年转换(年份,"公元纪年转清朝年号",0)
             else:
                 print("输入错误。")
         if 系统=="posix" and 输入==7 or 系统=="nt" and 输入==6:

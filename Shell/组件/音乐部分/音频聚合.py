@@ -1,12 +1,12 @@
 # 音频聚合
 if __name__ != '__main__':
-    import os
-    import sys
-    系统=os.name
+    from os import name
+    from sys import path
+    系统=name
     if 系统=="posix":
-        sys.path.append(sys.path[0]+"/组件/音乐部分")
+        path.append(sys.path[0]+"/组件/音乐部分")
     elif 系统=="nt":
-        sys.path.append(sys.path[0]+"\组件\音乐部分")
+        path.append(sys.path[0]+"\组件\音乐部分")
     from aipc import *
     from 王司徒 import *
     from 真香 import *

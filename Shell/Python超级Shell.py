@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
 # Python超级Shell
-import os
-import sys
-系统=os.name
+from os import system,name,chdir
+from sys import path
+系统=name
 if 系统=="posix":
-    sys.path.append(sys.path[0]+"/组件/音乐部分")
-    sys.path.append(sys.path[0]+"/组件")
-    sys.path.append(sys.path[0]+"/组件/工具箱")
+    path.append(path[0]+"/组件/音乐部分")
+    path.append(path[0]+"/组件")
+    path.append(path[0]+"/组件/工具箱")
 elif 系统=="nt":
-    sys.path.append(sys.path[0]+"\组件\音乐部分")
-    sys.path.append(sys.path[0]+"\组件")
-    sys.path.append(sys.path[0]+"\组件\工具箱")
-from 音频聚合 import *
-from 工具箱 import *
-from 帮助 import *
+    path.append(path[0]+"\组件\音乐部分")
+    path.append(path[0]+"\组件")
+    path.append(path[0]+"\组件\工具箱")
 from 系统信息 import *
 版本="滚动"
 print(" ____        _   _                   ____                        ")
@@ -40,15 +37,18 @@ while 1:
         if 目录=="":
             continue
         else:
-            os.chdir(目录)
+            chdir(目录)
             continue
     elif 输入=="帮助":
+        from 帮助 import *
         帮助()
         continue
     elif 输入=="工具箱":
+        from 工具箱 import 工具箱
         工具箱()
         continue
     elif 输入=="音频":
+        from 音频聚合 import *
         音频聚合()
         continue
     elif 输入=="退出":
@@ -62,7 +62,4 @@ while 1:
         print("以下是系统信息：")
         系统信息()
         continue
-    elif 输入=="计算器":
-        计算器()
-        continue
-    print(os.system(输入))
+    print(system(输入))
