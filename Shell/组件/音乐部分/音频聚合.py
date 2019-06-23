@@ -4,9 +4,9 @@ if __name__ != '__main__':
     from sys import path
     系统=name
     if 系统=="posix":
-        path.append(sys.path[0]+"/组件/音乐部分")
+        path.append(path[0]+"/组件/音乐部分")
     elif 系统=="nt":
-        path.append(sys.path[0]+"\组件\音乐部分")
+        path.append(path[0]+"\组件\音乐部分")
     from aipc import *
     from 王司徒 import *
     from 真香 import *
