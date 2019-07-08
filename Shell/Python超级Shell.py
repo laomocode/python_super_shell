@@ -32,7 +32,7 @@ print("下面是系统信息：")
 系统信息()
 while 1:
     输入=input("Shell：")
-    if 输入.find("cd")!=-1:
+    if 输入[:2]=="cd":
         目录=输入[3:]
         if 目录=="":
             continue
