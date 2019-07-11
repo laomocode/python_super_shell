@@ -4,11 +4,13 @@ if __name__ != '__main__':
     from sys import path
     from os import chdir
     from time import sleep
+def 切换工作目录(输入):
+    chdir(path[0])
+    chdir("音乐")
+    chdir(输入)
 def 音乐(音频,秒数):
     pygame.init()
     pygame.mixer.init()
-    chdir(path[0])
-    chdir("音乐")
     文件=open(音频,mode='r')
     播放=pygame.mixer.music.load(文件)
     pygame.mixer.music.play()
