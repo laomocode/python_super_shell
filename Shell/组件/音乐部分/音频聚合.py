@@ -39,7 +39,11 @@ def 音频聚合():
             else:
                 王司徒("")
         elif 输入==4:
-            aipc()
+            歌词输入=int(input("你需要开启歌词功能吗？（1）是、（2）否"))
+            if 歌词输入==1:
+                aipc("歌词")
+            else:
+                aipc("")
         elif 输入==5:
             AreYouOK()
         elif 输入==6:

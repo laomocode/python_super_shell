@@ -1,11 +1,6 @@
 if __name__ != '__main__':
     from sys import path
     from os import name
-    系统=name
-    if 系统=="posix":
-        path.append(path[0]+"/组件/工具箱")
-    elif 系统=="nt":
-        path.append(path[0]+"\组件\工具箱")
     from 天气 import *
     from 搜索 import *
     from 民国和公元转换 import *

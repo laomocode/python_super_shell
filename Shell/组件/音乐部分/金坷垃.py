@@ -1,7 +1,6 @@
 if __name__ != '__main__':
     from os import name
     from sys import path
-    系统=name
     from 音乐基础部分 import *
 def 老外打架():
     print("欢迎收听金坷垃广告。")
