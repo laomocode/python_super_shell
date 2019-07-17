@@ -1,5 +1,6 @@
 # Python 超级Shell
-## [点击下载](https://gitee.com/laomocode/python_super_shell/releases)
+## [码云下载](https://gitee.com/laomocode/python_super_shell/releases)
+## [Github下载](https://github.com/laomocode/python_super_shell/releases)
 ## Python Linux终端项目正式改名为Python 超级Shell！
 - 为什么要进行改名呢？
 - 因为目前项目的用途已经变成了一个Shell，因此进行这项实在的改名。同时，我计划不再局限与Linux，而是变成Windows和Mac OS都能用。
